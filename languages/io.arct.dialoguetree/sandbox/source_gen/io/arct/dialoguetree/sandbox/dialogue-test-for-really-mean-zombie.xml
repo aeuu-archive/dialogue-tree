@@ -1,0 +1,53 @@
+<?xml version = "1.0"?>
+<?dialogue-tree version="1.0"?>
+
+<document>
+  <DialogueTree name="test" entity="really mean zombie">
+    <ActionSet name="end">
+      <ExitAction />
+    </ActionSet>
+    <Dialogue name="main dialogue">
+      <Text text="hello!" />
+      <Text text="you seem yummy!" />
+      <ToDialogueAction>
+        <DialogueReference ref:dialogue="main dialogue" />
+      </ToDialogueAction>
+    </Dialogue>
+    <Dialogue name="dont kill">
+      <Text text="i guess its time to eat your brains!" />
+      <Text text="i heard that they're rally good!" />
+      <ExitAction />
+    </Dialogue>
+    <Dialogue name="kill">
+      <Text text="oh no!" />
+      <Text text="im dead now :(" />
+      <ExitAction />
+    </Dialogue>
+    <Dialogue name="interesting choices may occur">
+      <Text />
+      <OptionsAction>
+        <Option name="test">
+          <ReturnAction value="34" />
+        </Option>
+        <Option name="lol">
+          <ReturnAction value="hello!" />
+        </Option>
+        <Option name="exit">
+          <ExitAction />
+        </Option>
+      </OptionsAction>
+    </Dialogue>
+    <Dialogue name="test">
+      <Text text="fd" />
+      <OptionsAction>
+        <Option name="test">
+          <ExitAction />
+        </Option>
+      </OptionsAction>
+    </Dialogue>
+    <EntryDialogue>
+      <Text text="d" />
+      <ReturnAction value="34" />
+    </EntryDialogue>
+  </DialogueTree>
+</document>

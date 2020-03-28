@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <root nodeRef="r:b47cd73c-c14d-4003-aedc-41113fff2f93(DialogueTree.build)/7776513967991236318">
+    <file name="DialogueTree.xml">
+      <unit id="7776513967991236318" at="1,0,542,10" name="DialogueTree.build.DialogueTree" />
+    </file>
+  </root>
+  <root nodeRef="r:b47cd73c-c14d-4003-aedc-41113fff2f93(DialogueTree.build)/7776513967991236464">
+    <file name="DialogueTreeDistribution.xml">
+      <unit id="7776513967991236464" at="1,0,146,10" name="DialogueTree.build.DialogueTreeDistribution" />
+    </file>
+  </root>
+  <root nodeRef="r:b47cd73c-c14d-4003-aedc-41113fff2f93(DialogueTree.build)/7776513967991236714">
+    <file name="Info.plist.xml">
+      <unit id="7776513967991236714" at="1,0,121,8" name="DialogueTree.build.Info$plist" />
+    </file>
+  </root>
+</debug-info>
+

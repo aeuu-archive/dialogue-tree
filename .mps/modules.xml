@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MPSProject">
+    <projectModules>
+      <modulePath path="$PROJECT_DIR$/languages/io.arct.dialoguetree/io.arct.dialoguetree.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/io.arct.dialoguetree/sandbox/io.arct.dialoguetree.sandbox.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/DialogueTree.build/DialogueTree.build.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/DialogueTree.build0/DialogueTree.build.msd" folder="" />
+    </projectModules>
+  </component>
+</project>
