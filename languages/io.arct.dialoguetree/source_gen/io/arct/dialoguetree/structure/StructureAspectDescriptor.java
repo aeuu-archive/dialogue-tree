@@ -23,6 +23,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptEntryDialogue = createDescriptorForEntryDialogue();
   /*package*/ final ConceptDescriptor myConceptExitAction = createDescriptorForExitAction();
   /*package*/ final ConceptDescriptor myConceptIfAction = createDescriptorForIfAction();
+  /*package*/ final ConceptDescriptor myConceptModifier = createDescriptorForModifier();
+  /*package*/ final ConceptDescriptor myConceptModifierReference = createDescriptorForModifierReference();
   /*package*/ final ConceptDescriptor myConceptOption = createDescriptorForOption();
   /*package*/ final ConceptDescriptor myConceptOptionsAction = createDescriptorForOptionsAction();
   /*package*/ final ConceptDescriptor myConceptParticipant = createDescriptorForParticipant();
@@ -33,6 +35,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptReturnAction = createDescriptorForReturnAction();
   /*package*/ final ConceptDescriptor myConceptStructureDumper = createDescriptorForStructureDumper();
   /*package*/ final ConceptDescriptor myConceptText = createDescriptorForText();
+  /*package*/ final ConceptDescriptor myConceptTextModifier = createDescriptorForTextModifier();
   /*package*/ final ConceptDescriptor myConceptToActionSetAction = createDescriptorForToActionSetAction();
   /*package*/ final ConceptDescriptor myConceptToDialogueAction = createDescriptorForToDialogueAction();
   /*package*/ final ConceptDescriptor myConceptToEntryAction = createDescriptorForToEntryAction();
@@ -50,7 +53,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAction, myConceptActionSet, myConceptActionSetReference, myConceptDialogue, myConceptDialogueReference, myConceptDialogueTree, myConceptEntryDialogue, myConceptExitAction, myConceptIfAction, myConceptOption, myConceptOptionsAction, myConceptParticipant, myConceptParticipantReference, myConceptProperty, myConceptPropertyReference, myConceptRandomAction, myConceptReturnAction, myConceptStructureDumper, myConceptText, myConceptToActionSetAction, myConceptToDialogueAction, myConceptToEntryAction);
+    return Arrays.asList(myConceptAction, myConceptActionSet, myConceptActionSetReference, myConceptDialogue, myConceptDialogueReference, myConceptDialogueTree, myConceptEntryDialogue, myConceptExitAction, myConceptIfAction, myConceptModifier, myConceptModifierReference, myConceptOption, myConceptOptionsAction, myConceptParticipant, myConceptParticipantReference, myConceptProperty, myConceptPropertyReference, myConceptRandomAction, myConceptReturnAction, myConceptStructureDumper, myConceptText, myConceptTextModifier, myConceptToActionSetAction, myConceptToDialogueAction, myConceptToEntryAction);
   }
 
   @Override
@@ -75,6 +78,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptExitAction;
       case LanguageConceptSwitch.IfAction:
         return myConceptIfAction;
+      case LanguageConceptSwitch.Modifier:
+        return myConceptModifier;
+      case LanguageConceptSwitch.ModifierReference:
+        return myConceptModifierReference;
       case LanguageConceptSwitch.Option:
         return myConceptOption;
       case LanguageConceptSwitch.OptionsAction:
@@ -95,6 +102,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptStructureDumper;
       case LanguageConceptSwitch.Text:
         return myConceptText;
+      case LanguageConceptSwitch.TextModifier:
+        return myConceptTextModifier;
       case LanguageConceptSwitch.ToActionSetAction:
         return myConceptToActionSetAction;
       case LanguageConceptSwitch.ToDialogueAction:
@@ -167,6 +176,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:3b423fe3-f0e6-4131-bf0a-a0d7d72673f2(io.arct.dialoguetree.structure)/6264854145185431260");
     b.version(2);
     b.aggregate("participants", 0x812480f554473b9L).target(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x812480f55445d42L).optional(false).ordered(true).multiple(true).origin("581606532576474041").done();
+    b.aggregate("modifiers", 0x823c998d80e3d49L).target(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x823c998d80d4483L).optional(true).ordered(true).multiple(true).origin("586534034785320265").done();
     b.aggregate("properties", 0x56f13ba70596d037L).target(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x56f13ba70593b1ceL).optional(true).ordered(true).multiple(true).origin("6264854145188417591").done();
     b.aggregate("entry", 0x56f13ba7056c8904L).target(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x56f13ba7056be8d9L).optional(false).ordered(true).multiple(false).origin("6264854145185646852").done();
     b.aggregate("dialogues", 0x56f13ba7056a845bL).target(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x56f13ba7056a71c4L).optional(true).ordered(true).multiple(true).origin("6264854145185514587").done();
@@ -203,6 +213,23 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("action", 0x56f13ba705913a9aL).target(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x56f13ba7056d3ef7L).optional(false).ordered(true).multiple(false).origin("6264854145188051610").done();
     b.aggregate("elseAction", 0x56f13ba70592f2e9L).target(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x56f13ba7056d3ef7L).optional(false).ordered(true).multiple(false).origin("6264854145188164329").done();
     b.alias("if");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForModifier() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("io.arct.dialoguetree", "Modifier", 0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x823c998d80d4483L);
+    b.class_(false, false, false);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:3b423fe3-f0e6-4131-bf0a-a0d7d72673f2(io.arct.dialoguetree.structure)/586534034785256579");
+    b.version(2);
+    b.alias("modifier");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForModifierReference() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("io.arct.dialoguetree", "ModifierReference", 0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x823c998d80d4484L);
+    b.class_(false, false, false);
+    b.origin("r:3b423fe3-f0e6-4131-bf0a-a0d7d72673f2(io.arct.dialoguetree.structure)/586534034785256580");
+    b.version(2);
+    b.associate("modifier", 0x823c998d80d4485L).target(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x823c998d80d4483L).optional(false).origin("586534034785256581").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForOption() {
@@ -294,6 +321,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("text", 0x56f13ba7056ae043L).type(PrimitiveTypeId.STRING).origin("6264854145185538115").done();
     b.aggregate("speaker", 0x812480f554add6cL).target(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x812480f55445d45L).optional(false).ordered(true).multiple(false).origin("581606532576894316").done();
     b.alias("text");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForTextModifier() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("io.arct.dialoguetree", "TextModifier", 0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x823c998d80bca69L);
+    b.class_(false, false, false);
+    b.super_("jetbrains.mps.lang.core.structure.NodeAttribute", 0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x2eb1ad060897da54L);
+    b.origin("r:3b423fe3-f0e6-4131-bf0a-a0d7d72673f2(io.arct.dialoguetree.structure)/586534034785159785");
+    b.version(2);
+    b.aggregate("modifier", 0x823c998d80e3da3L).target(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x823c998d80d4484L).optional(false).ordered(true).multiple(false).origin("586534034785320355").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForToActionSetAction() {

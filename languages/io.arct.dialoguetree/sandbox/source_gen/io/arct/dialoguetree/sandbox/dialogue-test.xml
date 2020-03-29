@@ -3,11 +3,16 @@
 
 <document>
   <DialogueTree name="test">
+    <Modifier name="gdexz" />
+    <Modifier name="df" />
     <Participant name="kierth" />
     <Participant name="froggo" />
     <EntryDialogue>
       <Text text="hello!">
         <ParticipantReference ref:participant="kierth" />
+        <TextModifier>
+          <ModifierReference ref:modifier="gdexz" />
+        </TextModifier>
       </Text>
       <RandomAction>
         <ExitAction />

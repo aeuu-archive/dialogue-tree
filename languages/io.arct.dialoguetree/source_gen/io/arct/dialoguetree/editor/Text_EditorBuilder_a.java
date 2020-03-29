@@ -74,6 +74,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     Style style = new StyleImpl();
     new SubKeywordStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     editorCell.getStyle().putAll(style);
+    editorCell.addKeyMap(new ToggleModifiers());
     editorCell.setDefaultText("");
     return editorCell;
   }

@@ -37,19 +37,28 @@ public final class DialogueTree__BehaviorDescriptor extends BaseBHDescriptor {
   /*package*/ static Scope getScope_id52_Geb4QDV$(@NotNull SNode __thisNode__, SAbstractConcept kind, SNode child) {
 
     if (SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(kind), CONCEPTS.ActionSet$Xo)) {
+
       return SimpleRoleScope.forNamedElements(__thisNode__, LINKS.actions$gdr4);
     }
 
     if (SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(kind), CONCEPTS.Dialogue$58)) {
+
       return SimpleRoleScope.forNamedElements(__thisNode__, LINKS.dialogues$dowv);
     }
 
     if (SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(kind), CONCEPTS.Property$PD)) {
+
       return SimpleRoleScope.forNamedElements(__thisNode__, LINKS.properties$7hO5);
     }
 
     if (SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(kind), CONCEPTS.Participant$J0)) {
+
       return SimpleRoleScope.forNamedElements(__thisNode__, LINKS.participants$islE);
+    }
+
+    if (SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(kind), CONCEPTS.Modifier$5n)) {
+
+      return SimpleRoleScope.forNamedElements(__thisNode__, LINKS.modifiers$qAVe);
     }
 
     return null;
@@ -106,6 +115,7 @@ public final class DialogueTree__BehaviorDescriptor extends BaseBHDescriptor {
     /*package*/ static final SContainmentLink dialogues$dowv = MetaAdapterFactory.getContainmentLink(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x56f13ba705693edcL, 0x56f13ba7056a845bL, "dialogues");
     /*package*/ static final SContainmentLink properties$7hO5 = MetaAdapterFactory.getContainmentLink(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x56f13ba705693edcL, 0x56f13ba70596d037L, "properties");
     /*package*/ static final SContainmentLink participants$islE = MetaAdapterFactory.getContainmentLink(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x56f13ba705693edcL, 0x812480f554473b9L, "participants");
+    /*package*/ static final SContainmentLink modifiers$qAVe = MetaAdapterFactory.getContainmentLink(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x56f13ba705693edcL, 0x823c998d80e3d49L, "modifiers");
   }
 
   private static final class CONCEPTS {
@@ -113,5 +123,6 @@ public final class DialogueTree__BehaviorDescriptor extends BaseBHDescriptor {
     /*package*/ static final SConcept Dialogue$58 = MetaAdapterFactory.getConcept(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x56f13ba7056a71c4L, "io.arct.dialoguetree.structure.Dialogue");
     /*package*/ static final SConcept Property$PD = MetaAdapterFactory.getConcept(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x56f13ba70593b1ceL, "io.arct.dialoguetree.structure.Property");
     /*package*/ static final SConcept Participant$J0 = MetaAdapterFactory.getConcept(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x812480f55445d42L, "io.arct.dialoguetree.structure.Participant");
+    /*package*/ static final SConcept Modifier$5n = MetaAdapterFactory.getConcept(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x823c998d80d4483L, "io.arct.dialoguetree.structure.Modifier");
   }
 }

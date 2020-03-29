@@ -8,7 +8,15 @@
   <imports />
   <registry>
     <language id="200ef616-249d-4ed7-9810-cbdeaf100067" name="io.arct.dialoguetree">
+      <concept id="586534034785159785" name="io.arct.dialoguetree.structure.TextModifier" flags="ng" index="3ga0fL">
+        <child id="586534034785320355" name="modifier" index="3gbvgV" />
+      </concept>
+      <concept id="586534034785256579" name="io.arct.dialoguetree.structure.Modifier" flags="ng" index="3gbCOr" />
+      <concept id="586534034785256580" name="io.arct.dialoguetree.structure.ModifierReference" flags="ng" index="3gbCOs">
+        <reference id="586534034785256581" name="modifier" index="3gbCOt" />
+      </concept>
       <concept id="6264854145185431260" name="io.arct.dialoguetree.structure.DialogueTree" flags="ng" index="1jA0lV">
+        <child id="586534034785320265" name="modifiers" index="3gbvjh" />
         <child id="6264854145185646852" name="entry" index="1jBraz" />
         <child id="581606532576474041" name="participants" index="1tlzIQ" />
       </concept>
@@ -32,6 +40,9 @@
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
+      </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
@@ -39,6 +50,12 @@
   </registry>
   <node concept="1jA0lV" id="wii0XlhRX4">
     <property role="TrG5h" value="test" />
+    <node concept="3gbCOr" id="wzMpzo3Yzp" role="3gbvjh">
+      <property role="TrG5h" value="gdexz" />
+    </node>
+    <node concept="3gbCOr" id="wzMpzo3Yzr" role="3gbvjh">
+      <property role="TrG5h" value="df" />
+    </node>
     <node concept="1tlxld" id="wii0XlhRX5" role="1tlzIQ">
       <property role="TrG5h" value="kierth" />
     </node>
@@ -46,10 +63,15 @@
       <property role="TrG5h" value="froggo" />
     </node>
     <node concept="1jAHdY" id="wii0XlhRX6" role="1jBraz">
-      <node concept="1jAXJ_" id="wii0XlhRX7" role="1jAW9e">
+      <node concept="1jAXJ_" id="wzMpzo5bvZ" role="1jAW9e">
         <property role="1jAXJ$" value="hello!" />
-        <node concept="1tlxla" id="wii0Xlj6ln" role="1tm9lz">
+        <node concept="1tlxla" id="wzMpzo5bw3" role="1tm9lz">
           <ref role="1tlxl9" node="wii0XlhRX5" resolve="kierth" />
+        </node>
+        <node concept="3ga0fL" id="wzMpzo5bw6" role="lGtFl">
+          <node concept="3gbCOs" id="wzMpzo5bw8" role="3gbvgV">
+            <ref role="3gbCOt" node="wzMpzo3Yzp" resolve="gdexz" />
+          </node>
         </node>
       </node>
       <node concept="1tmLS3" id="wii0XliHPj" role="1jB0j4">

@@ -18,6 +18,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_EntryDialogue;
   private ConceptPresentation props_ExitAction;
   private ConceptPresentation props_IfAction;
+  private ConceptPresentation props_Modifier;
+  private ConceptPresentation props_ModifierReference;
   private ConceptPresentation props_Option;
   private ConceptPresentation props_OptionsAction;
   private ConceptPresentation props_Participant;
@@ -28,6 +30,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ReturnAction;
   private ConceptPresentation props_StructureDumper;
   private ConceptPresentation props_Text;
+  private ConceptPresentation props_TextModifier;
   private ConceptPresentation props_ToActionSetAction;
   private ConceptPresentation props_ToDialogueAction;
   private ConceptPresentation props_ToEntryAction;
@@ -99,6 +102,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_IfAction = cpb.create();
         }
         return props_IfAction;
+      case LanguageConceptSwitch.Modifier:
+        if (props_Modifier == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_Modifier = cpb.create();
+        }
+        return props_Modifier;
+      case LanguageConceptSwitch.ModifierReference:
+        if (props_ModifierReference == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x823c998d80d4484L, 0x823c998d80d4485L, "modifier", "", "");
+          props_ModifierReference = cpb.create();
+        }
+        return props_ModifierReference;
       case LanguageConceptSwitch.Option:
         if (props_Option == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -169,6 +186,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Text = cpb.create();
         }
         return props_Text;
+      case LanguageConceptSwitch.TextModifier:
+        if (props_TextModifier == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("TextModifier");
+          props_TextModifier = cpb.create();
+        }
+        return props_TextModifier;
       case LanguageConceptSwitch.ToActionSetAction:
         if (props_ToActionSetAction == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

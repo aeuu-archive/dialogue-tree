@@ -11,6 +11,13 @@
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
+      <concept id="6054523464627964745" name="jetbrains.mps.lang.structure.structure.AttributeInfo_AttributedConcept" flags="ng" index="trNpa">
+        <reference id="6054523464627965081" name="concept" index="trN6q" />
+      </concept>
+      <concept id="2992811758677295509" name="jetbrains.mps.lang.structure.structure.AttributeInfo" flags="ng" index="M6xJ_">
+        <property id="7588428831955550663" name="role" index="Hh88m" />
+        <child id="7588428831947959310" name="attributed" index="EQaZv" />
+      </concept>
       <concept id="1169125787135" name="jetbrains.mps.lang.structure.structure.AbstractConceptDeclaration" flags="ig" index="PkWjJ">
         <property id="6714410169261853888" name="conceptId" index="EcuMT" />
         <property id="4628067390765956802" name="abstract" index="R5$K7" />
@@ -39,6 +46,9 @@
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
+      </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
@@ -62,6 +72,13 @@
       <property role="20kJfa" value="participants" />
       <property role="20lbJX" value="fLJekj6/_1__n" />
       <ref role="20lvS9" node="wii0Xlh5P2" resolve="Participant" />
+    </node>
+    <node concept="1TJgyj" id="wzMpzo3zP9" role="1TKVEi">
+      <property role="IQ2ns" value="586534034785320265" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="modifiers" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="wzMpzo3ki3" resolve="Modifier" />
     </node>
     <node concept="1TJgyj" id="5rLeUs5_H0R" role="1TKVEi">
       <property role="IQ2ns" value="6264854145188417591" />
@@ -349,6 +366,44 @@
       <property role="20kJfa" value="actions" />
       <property role="20lbJX" value="fLJekj6/_1__n" />
       <ref role="20lvS9" node="5rLeUs5rjVR" resolve="Action" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="wzMpzo2WDD">
+    <property role="EcuMT" value="586534034785159785" />
+    <property role="TrG5h" value="TextModifier" />
+    <ref role="1TJDcQ" to="tpck:2ULFgo8_XDk" resolve="NodeAttribute" />
+    <node concept="M6xJ_" id="wzMpzo3zQv" role="lGtFl">
+      <property role="Hh88m" value="textModifier" />
+      <node concept="trNpa" id="wzMpzo3zQx" role="EQaZv">
+        <ref role="trN6q" node="5rLeUs5qI12" resolve="Text" />
+      </node>
+    </node>
+    <node concept="1TJgyj" id="wzMpzo3zQz" role="1TKVEi">
+      <property role="IQ2ns" value="586534034785320355" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="modifier" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="wzMpzo3ki4" resolve="ModifierReference" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="wzMpzo3ki3">
+    <property role="EcuMT" value="586534034785256579" />
+    <property role="TrG5h" value="Modifier" />
+    <property role="34LRSv" value="modifier" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="wzMpzo3kix" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="wzMpzo3ki4">
+    <property role="EcuMT" value="586534034785256580" />
+    <property role="TrG5h" value="ModifierReference" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="wzMpzo3ki5" role="1TKVEi">
+      <property role="IQ2ns" value="586534034785256581" />
+      <property role="20kJfa" value="modifier" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="wzMpzo3ki3" resolve="Modifier" />
     </node>
   </node>
 </model>
