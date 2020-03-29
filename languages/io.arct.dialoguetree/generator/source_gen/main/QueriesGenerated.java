@@ -11,6 +11,8 @@ import jetbrains.mps.generator.template.MapSrcMacroContext;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import io.arct.dialoguetree.behavior.StructureDumper__BehaviorDescriptor;
+import jetbrains.mps.internal.collections.runtime.ListSequence;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import java.util.Map;
 import jetbrains.mps.generator.impl.query.PropertyValueQuery;
 import java.util.HashMap;
@@ -32,13 +34,10 @@ public class QueriesGenerated extends QueryProviderBase {
     return "dialogue-" + name;
   }
   public static SNode mapSrcMacro_map_1_0(final MapSrcMacroContext _context) {
-    SNode root = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x479c7a8c02f943b5L, 0x9139d910cb22f298L, 0x5c842a42c54b10b2L, "jetbrains.mps.core.xml.structure.XmlElement"));
-    SNode dumper = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x56f13ba7056fbc86L, "io.arct.dialoguetree.structure.StructureDumper"));
+    SNode element = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x479c7a8c02f943b5L, 0x9139d910cb22f298L, 0x5c842a42c54b10b2L, "jetbrains.mps.core.xml.structure.XmlElement"));
 
-    SPropertyOperations.assign(root, PROPS.tagName$U00C, "document");
-
-    StructureDumper__BehaviorDescriptor.dumpStructure_id5rLeUs5rVMi.invoke(dumper, _context.getNode(), root);
-    return root;
+    StructureDumper__BehaviorDescriptor.dumpStructure_id5rLeUs5rVMi.invoke(SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x56f13ba7056fbc86L, "io.arct.dialoguetree.structure.StructureDumper")), _context.getNode(), element);
+    return ListSequence.fromList(SNodeOperations.getChildren(element)).first();
   }
   private final Map<String, PropertyValueQuery> pvqMethods = new HashMap<String, PropertyValueQuery>();
   {
@@ -72,7 +71,7 @@ public class QueriesGenerated extends QueryProviderBase {
   }
   private final Map<String, MapNodeQuery> mnqMethods = new HashMap<String, MapNodeQuery>();
   {
-    mnqMethods.put("6264854145185835149", new MNQ(0));
+    mnqMethods.put("586534034785874892", new MNQ(0));
   }
   @NotNull
   @Override
@@ -101,6 +100,5 @@ public class QueriesGenerated extends QueryProviderBase {
 
   private static final class PROPS {
     /*package*/ static final SProperty name$tAp1 = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
-    /*package*/ static final SProperty tagName$U00C = MetaAdapterFactory.getProperty(0x479c7a8c02f943b5L, 0x9139d910cb22f298L, 0x5c842a42c54b10b2L, 0x5c842a42c54b10b6L, "tagName");
   }
 }
