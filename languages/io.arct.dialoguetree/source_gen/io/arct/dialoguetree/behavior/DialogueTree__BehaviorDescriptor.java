@@ -48,6 +48,10 @@ public final class DialogueTree__BehaviorDescriptor extends BaseBHDescriptor {
       return SimpleRoleScope.forNamedElements(__thisNode__, LINKS.properties$7hO5);
     }
 
+    if (SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(kind), CONCEPTS.Participant$J0)) {
+      return SimpleRoleScope.forNamedElements(__thisNode__, LINKS.participants$islE);
+    }
+
     return null;
   }
 
@@ -101,11 +105,13 @@ public final class DialogueTree__BehaviorDescriptor extends BaseBHDescriptor {
     /*package*/ static final SContainmentLink actions$gdr4 = MetaAdapterFactory.getContainmentLink(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x56f13ba705693edcL, 0x56f13ba7058b1640L, "actions");
     /*package*/ static final SContainmentLink dialogues$dowv = MetaAdapterFactory.getContainmentLink(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x56f13ba705693edcL, 0x56f13ba7056a845bL, "dialogues");
     /*package*/ static final SContainmentLink properties$7hO5 = MetaAdapterFactory.getContainmentLink(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x56f13ba705693edcL, 0x56f13ba70596d037L, "properties");
+    /*package*/ static final SContainmentLink participants$islE = MetaAdapterFactory.getContainmentLink(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x56f13ba705693edcL, 0x812480f554473b9L, "participants");
   }
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept ActionSet$Xo = MetaAdapterFactory.getConcept(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x56f13ba7058b1644L, "io.arct.dialoguetree.structure.ActionSet");
     /*package*/ static final SConcept Dialogue$58 = MetaAdapterFactory.getConcept(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x56f13ba7056a71c4L, "io.arct.dialoguetree.structure.Dialogue");
     /*package*/ static final SConcept Property$PD = MetaAdapterFactory.getConcept(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x56f13ba70593b1ceL, "io.arct.dialoguetree.structure.Property");
+    /*package*/ static final SConcept Participant$J0 = MetaAdapterFactory.getConcept(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x812480f55445d42L, "io.arct.dialoguetree.structure.Participant");
   }
 }

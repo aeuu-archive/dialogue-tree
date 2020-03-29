@@ -3,8 +3,8 @@
   <property name="build.dir" location="build" />
   <property name="build.tmp" location="${build.dir}/tmp/DialogueTreeDistribution" />
   <property name="build.layout" location="${build.dir}/artifacts/DialogueTreeDistribution" />
-  <property name="mps_home" location="" />
-  <property name="version" value="1.0" />
+  <property name="mps_home" location="${basedir}/../../../../../AppData/Local/MPS 2019.3" />
+  <property name="version" value="1.0.1" />
   <property name="artifacts.DialogueTree" location="${build.dir}/artifacts/DialogueTree" />
   <property file="${artifacts.DialogueTree}/build.properties" prefix="import.DialogueTree" />
   <property name="DialogueTree.date" value="${import.DialogueTree.DialogueTree.date}" />

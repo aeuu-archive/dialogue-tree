@@ -20,14 +20,17 @@ public final class LanguageConceptSwitch {
   public static final int IfAction = 8;
   public static final int Option = 9;
   public static final int OptionsAction = 10;
-  public static final int Property = 11;
-  public static final int PropertyReference = 12;
-  public static final int ReturnAction = 13;
-  public static final int StructureDumper = 14;
-  public static final int Text = 15;
-  public static final int ToActionSetAction = 16;
-  public static final int ToDialogueAction = 17;
-  public static final int ToEntryAction = 18;
+  public static final int Participant = 11;
+  public static final int ParticipantReference = 12;
+  public static final int Property = 13;
+  public static final int PropertyReference = 14;
+  public static final int RandomAction = 15;
+  public static final int ReturnAction = 16;
+  public static final int StructureDumper = 17;
+  public static final int Text = 18;
+  public static final int ToActionSetAction = 19;
+  public static final int ToDialogueAction = 20;
+  public static final int ToEntryAction = 21;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x200ef616249d4ed7L, 0x9810cbdeaf100067L);
@@ -42,8 +45,11 @@ public final class LanguageConceptSwitch {
     builder.put(0x56f13ba705913a99L, IfAction);
     builder.put(0x56f13ba7056d89ffL, Option);
     builder.put(0x56f13ba7056d3efaL, OptionsAction);
+    builder.put(0x812480f55445d42L, Participant);
+    builder.put(0x812480f55445d45L, ParticipantReference);
     builder.put(0x56f13ba70593b1ceL, Property);
     builder.put(0x56f13ba7059b2caaL, PropertyReference);
+    builder.put(0x812480f5549560cL, RandomAction);
     builder.put(0x56f13ba7056e10b4L, ReturnAction);
     builder.put(0x56f13ba7056fbc86L, StructureDumper);
     builder.put(0x56f13ba7056ae042L, Text);

@@ -79,7 +79,9 @@
         <child id="4380385936562148502" name="containerName" index="Nbhlr" />
       </concept>
       <concept id="7389400916848036984" name="jetbrains.mps.build.structure.BuildLayout_Folder" flags="ng" index="398223" />
-      <concept id="7389400916848136194" name="jetbrains.mps.build.structure.BuildFolderMacro" flags="ng" index="398rNT" />
+      <concept id="7389400916848136194" name="jetbrains.mps.build.structure.BuildFolderMacro" flags="ng" index="398rNT">
+        <child id="7389400916848144618" name="defaultPath" index="398pKh" />
+      </concept>
       <concept id="7389400916848153117" name="jetbrains.mps.build.structure.BuildSourceMacroRelativePath" flags="ng" index="398BVA">
         <reference id="7389400916848153130" name="macro" index="398BVh" />
       </concept>
@@ -202,6 +204,7 @@
       <concept id="7753544965996377997" name="jetbrains.mps.build.mps.structure.BuildMps_Branding" flags="ng" index="1zClus">
         <property id="3497141547781541445" name="minor" index="2OjLBK" />
         <property id="3497141547781541444" name="major" index="2OjLBL" />
+        <property id="4237758264760168561" name="bugfixNr" index="1lNJF1" />
         <child id="6845119683729294884" name="progressColor" index="27hGoL" />
         <child id="922958177840117051" name="script" index="2gvbiD" />
         <child id="6108265972537182997" name="aboutScreen" index="2EqU2s" />
@@ -245,6 +248,7 @@
       <property role="2OjLBK" value="0" />
       <property role="TrG5h" value="MPS" />
       <property role="2OjLBL" value="1" />
+      <property role="1lNJF1" value="1" />
       <node concept="55IIr" id="6JFI$2cYMrL" role="3vi$VU">
         <node concept="2Ry0Ak" id="6JFI$2cYMrM" role="iGT6I">
           <property role="2Ry0Am" value="icons" />
@@ -342,7 +346,7 @@
       <node concept="aVJcg" id="6JFI$2cYMr$" role="aVJcv">
         <node concept="NbPM2" id="6JFI$2cYMr_" role="aVJcq">
           <node concept="3Mxwew" id="6JFI$2cYMrA" role="3MwsjC">
-            <property role="3MwjfP" value="193.SNAPSHOT" />
+            <property role="3MwjfP" value="1" />
           </node>
         </node>
       </node>
@@ -1196,13 +1200,39 @@
     </node>
     <node concept="398rNT" id="6JFI$2cYMtN" role="1l3spd">
       <property role="TrG5h" value="mps_home" />
+      <node concept="55IIr" id="7jLvmTSsz5t" role="398pKh">
+        <node concept="2Ry0Ak" id="7jLvmTSsz5z" role="iGT6I">
+          <property role="2Ry0Am" value=".." />
+          <node concept="2Ry0Ak" id="7jLvmTSsz5C" role="2Ry0An">
+            <property role="2Ry0Am" value=".." />
+            <node concept="2Ry0Ak" id="7jLvmTSsz5H" role="2Ry0An">
+              <property role="2Ry0Am" value=".." />
+              <node concept="2Ry0Ak" id="7jLvmTSsz5M" role="2Ry0An">
+                <property role="2Ry0Am" value=".." />
+                <node concept="2Ry0Ak" id="7jLvmTSsz5R" role="2Ry0An">
+                  <property role="2Ry0Am" value=".." />
+                  <node concept="2Ry0Ak" id="7jLvmTSsz5W" role="2Ry0An">
+                    <property role="2Ry0Am" value="AppData" />
+                    <node concept="2Ry0Ak" id="7jLvmTSsz61" role="2Ry0An">
+                      <property role="2Ry0Am" value="Local" />
+                      <node concept="2Ry0Ak" id="7jLvmTSsz66" role="2Ry0An">
+                        <property role="2Ry0Am" value="MPS 2019.3" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
     </node>
     <node concept="2kB4xC" id="6JFI$2cYMtO" role="1l3spd">
       <property role="TrG5h" value="version" />
       <node concept="aVJcg" id="6JFI$2cYMtP" role="aVJcv">
         <node concept="NbPM2" id="6JFI$2cYMtQ" role="aVJcq">
           <node concept="3Mxwew" id="6JFI$2cYMtR" role="3MwsjC">
-            <property role="3MwjfP" value="1.0" />
+            <property role="3MwjfP" value="1.0.1" />
           </node>
         </node>
       </node>

@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debug-info version="2">
-  <root nodeRef="r:6768aa33-fd85-4c7b-b9d2-b58bf3b26250(io.arct.dialoguetree.sandbox)/6264854145185509827">
-    <file name="dialogue-test-for-really-mean-zombie.xml">
-      <unit id="6264854145185509827" at="1,0,53,11" name="io.arct.dialoguetree.sandbox.dialogue-test-for-really-mean-zombie" />
-    </file>
-  </root>
-  <root nodeRef="r:6768aa33-fd85-4c7b-b9d2-b58bf3b26250(io.arct.dialoguetree.sandbox)/6264854145188166363">
-    <file name="dialogue-test2-for-another-amazing-entity.xml">
-      <unit id="6264854145188166363" at="1,0,40,11" name="io.arct.dialoguetree.sandbox.dialogue-test2-for-another-amazing-entity" />
+  <root nodeRef="r:6768aa33-fd85-4c7b-b9d2-b58bf3b26250(io.arct.dialoguetree.sandbox)/581606532576673604">
+    <file name="dialogue-test.xml">
+      <unit id="581606532576673604" at="1,0,18,11" name="io.arct.dialoguetree.sandbox.dialogue-test" />
     </file>
   </root>
 </debug-info>

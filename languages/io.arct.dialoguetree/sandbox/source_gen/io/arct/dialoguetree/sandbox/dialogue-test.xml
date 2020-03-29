@@ -1,0 +1,18 @@
+<?xml version = "1.0"?>
+<?dialogue-tree version="1.0"?>
+
+<document>
+  <DialogueTree name="test">
+    <Participant name="kierth" />
+    <Participant name="froggo" />
+    <EntryDialogue>
+      <Text text="hello!">
+        <ParticipantReference ref:participant="kierth" />
+      </Text>
+      <RandomAction>
+        <ExitAction />
+        <ToEntryAction />
+      </RandomAction>
+    </EntryDialogue>
+  </DialogueTree>
+</document>

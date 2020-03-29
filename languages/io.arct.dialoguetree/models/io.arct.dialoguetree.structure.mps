@@ -56,6 +56,13 @@
     <node concept="PrWs8" id="5rLeUs5xsV9" role="PzmwI">
       <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
     </node>
+    <node concept="1TJgyj" id="wii0Xlh7eT" role="1TKVEi">
+      <property role="IQ2ns" value="581606532576474041" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="participants" />
+      <property role="20lbJX" value="fLJekj6/_1__n" />
+      <ref role="20lvS9" node="wii0Xlh5P2" resolve="Participant" />
+    </node>
     <node concept="1TJgyj" id="5rLeUs5_H0R" role="1TKVEi">
       <property role="IQ2ns" value="6264854145188417591" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -83,11 +90,6 @@
       <property role="20kJfa" value="actions" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="5rLeUs5yLp4" resolve="ActionSet" />
-    </node>
-    <node concept="1TJgyi" id="5rLeUs5rrkV" role="1TKVEl">
-      <property role="IQ2nx" value="6264854145185723707" />
-      <property role="TrG5h" value="entity" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
   </node>
   <node concept="1TIwiD" id="5rLeUs5qB74">
@@ -122,6 +124,13 @@
       <property role="IQ2nx" value="6264854145185538115" />
       <property role="TrG5h" value="text" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyj" id="wii0XliHPG" role="1TKVEi">
+      <property role="IQ2ns" value="581606532576894316" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="speaker" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="wii0Xlh5P5" resolve="ParticipantReference" />
     </node>
   </node>
   <node concept="1TIwiD" id="5rLeUs5qYzp">
@@ -307,6 +316,39 @@
       <property role="20kJfa" value="property" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="5rLeUs5$V7e" resolve="Property" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="wii0Xlh5P2">
+    <property role="EcuMT" value="581606532576468290" />
+    <property role="TrG5h" value="Participant" />
+    <property role="34LRSv" value="participant" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="wii0Xlh5P3" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="wii0Xlh5P5">
+    <property role="EcuMT" value="581606532576468293" />
+    <property role="TrG5h" value="ParticipantReference" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="wii0Xlh5P6" role="1TKVEi">
+      <property role="IQ2ns" value="581606532576468294" />
+      <property role="20kJfa" value="participant" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="wii0Xlh5P2" resolve="Participant" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="wii0Xliloc">
+    <property role="EcuMT" value="581606532576794124" />
+    <property role="TrG5h" value="RandomAction" />
+    <property role="34LRSv" value="random" />
+    <ref role="1TJDcQ" node="5rLeUs5rjVR" resolve="Action" />
+    <node concept="1TJgyj" id="wii0XliloR" role="1TKVEi">
+      <property role="IQ2ns" value="581606532576794167" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="actions" />
+      <property role="20lbJX" value="fLJekj6/_1__n" />
+      <ref role="20lvS9" node="5rLeUs5rjVR" resolve="Action" />
     </node>
   </node>
 </model>

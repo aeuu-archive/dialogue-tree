@@ -6,6 +6,7 @@
       <modulePath path="$PROJECT_DIR$/languages/io.arct.dialoguetree/sandbox/io.arct.dialoguetree.sandbox.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/DialogueTree.build/DialogueTree.build.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/DialogueTree.build0/DialogueTree.build.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/DialogueTree.buildPlugin/DialogueTree.buildPlugin.msd" folder="" />
     </projectModules>
   </component>
 </project>

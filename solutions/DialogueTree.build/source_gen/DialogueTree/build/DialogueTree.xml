@@ -6,7 +6,7 @@
   <tstamp>
     <format property="date" pattern="yyyyMMdd" />
   </tstamp>
-  <property name="build.number" value="193.SNAPSHOT" />
+  <property name="build.number" value="1" />
   <property name="mps_home" location="" />
   <property name="artifacts.mpsStandalone" location="${mps_home}" />
   <property name="artifacts.mpsMakePlugin" location="${mps_home}/plugins" />
@@ -63,7 +63,7 @@
     <mkdir dir="${build.tmp}/default/branding.jar/idea" />
     <echoxml file="${build.tmp}/default/branding.jar/idea/IdeaApplicationInfo.xml">
       <component>
-        <version major="1" minor="0" eap="false" />
+        <version major="1" minor="0.1" eap="false" />
         <build number="${build.number}" date="${date}" />
         <logo url="/splash.png" textcolor="FFFFFF" progressColor="FFFFFF" />
         <about url="/about.png" foreground="FFFFFF" copyrightForeground="FFFFFF" />

@@ -28,8 +28,8 @@ public class QueriesGenerated extends QueryProviderBase {
   }
   public static Object propertyMacro_GetValue_1_0(final PropertyMacroContext _context) {
     String name = SPropertyOperations.getString(_context.getNode(), PROPS.name$tAp1).replaceAll("\\s", "-").toLowerCase();
-    String entity = SPropertyOperations.getString(_context.getNode(), PROPS.entity$EoDP).replaceAll("\\s", "-").toLowerCase();
-    return "dialogue-" + name + "-for-" + entity;
+
+    return "dialogue-" + name;
   }
   public static SNode mapSrcMacro_map_1_0(final MapSrcMacroContext _context) {
     SNode root = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x479c7a8c02f943b5L, 0x9139d910cb22f298L, 0x5c842a42c54b10b2L, "jetbrains.mps.core.xml.structure.XmlElement"));
@@ -101,7 +101,6 @@ public class QueriesGenerated extends QueryProviderBase {
 
   private static final class PROPS {
     /*package*/ static final SProperty name$tAp1 = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
-    /*package*/ static final SProperty entity$EoDP = MetaAdapterFactory.getProperty(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x56f13ba705693edcL, 0x56f13ba7056db53bL, "entity");
     /*package*/ static final SProperty tagName$U00C = MetaAdapterFactory.getProperty(0x479c7a8c02f943b5L, 0x9139d910cb22f298L, 0x5c842a42c54b10b2L, 0x5c842a42c54b10b6L, "tagName");
   }
 }

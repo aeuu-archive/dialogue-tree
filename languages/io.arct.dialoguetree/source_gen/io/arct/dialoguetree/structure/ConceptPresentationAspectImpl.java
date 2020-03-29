@@ -20,8 +20,11 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_IfAction;
   private ConceptPresentation props_Option;
   private ConceptPresentation props_OptionsAction;
+  private ConceptPresentation props_Participant;
+  private ConceptPresentation props_ParticipantReference;
   private ConceptPresentation props_Property;
   private ConceptPresentation props_PropertyReference;
+  private ConceptPresentation props_RandomAction;
   private ConceptPresentation props_ReturnAction;
   private ConceptPresentation props_StructureDumper;
   private ConceptPresentation props_Text;
@@ -110,6 +113,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_OptionsAction = cpb.create();
         }
         return props_OptionsAction;
+      case LanguageConceptSwitch.Participant:
+        if (props_Participant == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_Participant = cpb.create();
+        }
+        return props_Participant;
+      case LanguageConceptSwitch.ParticipantReference:
+        if (props_ParticipantReference == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x812480f55445d45L, 0x812480f55445d46L, "participant", "", "");
+          props_ParticipantReference = cpb.create();
+        }
+        return props_ParticipantReference;
       case LanguageConceptSwitch.Property:
         if (props_Property == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -124,6 +141,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_PropertyReference = cpb.create();
         }
         return props_PropertyReference;
+      case LanguageConceptSwitch.RandomAction:
+        if (props_RandomAction == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("random");
+          props_RandomAction = cpb.create();
+        }
+        return props_RandomAction;
       case LanguageConceptSwitch.ReturnAction:
         if (props_ReturnAction == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

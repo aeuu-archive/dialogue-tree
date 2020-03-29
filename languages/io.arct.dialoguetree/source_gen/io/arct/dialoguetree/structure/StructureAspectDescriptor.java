@@ -25,8 +25,11 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptIfAction = createDescriptorForIfAction();
   /*package*/ final ConceptDescriptor myConceptOption = createDescriptorForOption();
   /*package*/ final ConceptDescriptor myConceptOptionsAction = createDescriptorForOptionsAction();
+  /*package*/ final ConceptDescriptor myConceptParticipant = createDescriptorForParticipant();
+  /*package*/ final ConceptDescriptor myConceptParticipantReference = createDescriptorForParticipantReference();
   /*package*/ final ConceptDescriptor myConceptProperty = createDescriptorForProperty();
   /*package*/ final ConceptDescriptor myConceptPropertyReference = createDescriptorForPropertyReference();
+  /*package*/ final ConceptDescriptor myConceptRandomAction = createDescriptorForRandomAction();
   /*package*/ final ConceptDescriptor myConceptReturnAction = createDescriptorForReturnAction();
   /*package*/ final ConceptDescriptor myConceptStructureDumper = createDescriptorForStructureDumper();
   /*package*/ final ConceptDescriptor myConceptText = createDescriptorForText();
@@ -47,7 +50,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAction, myConceptActionSet, myConceptActionSetReference, myConceptDialogue, myConceptDialogueReference, myConceptDialogueTree, myConceptEntryDialogue, myConceptExitAction, myConceptIfAction, myConceptOption, myConceptOptionsAction, myConceptProperty, myConceptPropertyReference, myConceptReturnAction, myConceptStructureDumper, myConceptText, myConceptToActionSetAction, myConceptToDialogueAction, myConceptToEntryAction);
+    return Arrays.asList(myConceptAction, myConceptActionSet, myConceptActionSetReference, myConceptDialogue, myConceptDialogueReference, myConceptDialogueTree, myConceptEntryDialogue, myConceptExitAction, myConceptIfAction, myConceptOption, myConceptOptionsAction, myConceptParticipant, myConceptParticipantReference, myConceptProperty, myConceptPropertyReference, myConceptRandomAction, myConceptReturnAction, myConceptStructureDumper, myConceptText, myConceptToActionSetAction, myConceptToDialogueAction, myConceptToEntryAction);
   }
 
   @Override
@@ -76,10 +79,16 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptOption;
       case LanguageConceptSwitch.OptionsAction:
         return myConceptOptionsAction;
+      case LanguageConceptSwitch.Participant:
+        return myConceptParticipant;
+      case LanguageConceptSwitch.ParticipantReference:
+        return myConceptParticipantReference;
       case LanguageConceptSwitch.Property:
         return myConceptProperty;
       case LanguageConceptSwitch.PropertyReference:
         return myConceptPropertyReference;
+      case LanguageConceptSwitch.RandomAction:
+        return myConceptRandomAction;
       case LanguageConceptSwitch.ReturnAction:
         return myConceptReturnAction;
       case LanguageConceptSwitch.StructureDumper:
@@ -157,7 +166,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x33d23ee961a0cbf3L);
     b.origin("r:3b423fe3-f0e6-4131-bf0a-a0d7d72673f2(io.arct.dialoguetree.structure)/6264854145185431260");
     b.version(2);
-    b.property("entity", 0x56f13ba7056db53bL).type(PrimitiveTypeId.STRING).origin("6264854145185723707").done();
+    b.aggregate("participants", 0x812480f554473b9L).target(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x812480f55445d42L).optional(false).ordered(true).multiple(true).origin("581606532576474041").done();
     b.aggregate("properties", 0x56f13ba70596d037L).target(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x56f13ba70593b1ceL).optional(true).ordered(true).multiple(true).origin("6264854145188417591").done();
     b.aggregate("entry", 0x56f13ba7056c8904L).target(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x56f13ba7056be8d9L).optional(false).ordered(true).multiple(false).origin("6264854145185646852").done();
     b.aggregate("dialogues", 0x56f13ba7056a845bL).target(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x56f13ba7056a71c4L).optional(true).ordered(true).multiple(true).origin("6264854145185514587").done();
@@ -216,6 +225,23 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.alias("actions");
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForParticipant() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("io.arct.dialoguetree", "Participant", 0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x812480f55445d42L);
+    b.class_(false, false, false);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:3b423fe3-f0e6-4131-bf0a-a0d7d72673f2(io.arct.dialoguetree.structure)/581606532576468290");
+    b.version(2);
+    b.alias("participant");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForParticipantReference() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("io.arct.dialoguetree", "ParticipantReference", 0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x812480f55445d45L);
+    b.class_(false, false, false);
+    b.origin("r:3b423fe3-f0e6-4131-bf0a-a0d7d72673f2(io.arct.dialoguetree.structure)/581606532576468293");
+    b.version(2);
+    b.associate("participant", 0x812480f55445d46L).target(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x812480f55445d42L).optional(false).origin("581606532576468294").done();
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForProperty() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("io.arct.dialoguetree", "Property", 0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x56f13ba70593b1ceL);
     b.class_(false, false, false);
@@ -231,6 +257,16 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:3b423fe3-f0e6-4131-bf0a-a0d7d72673f2(io.arct.dialoguetree.structure)/6264854145188703402");
     b.version(2);
     b.associate("property", 0x56f13ba7059b2cabL).target(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x56f13ba70593b1ceL).optional(false).origin("6264854145188703403").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForRandomAction() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("io.arct.dialoguetree", "RandomAction", 0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x812480f5549560cL);
+    b.class_(false, false, false);
+    b.super_("io.arct.dialoguetree.structure.Action", 0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x56f13ba7056d3ef7L);
+    b.origin("r:3b423fe3-f0e6-4131-bf0a-a0d7d72673f2(io.arct.dialoguetree.structure)/581606532576794124");
+    b.version(2);
+    b.aggregate("actions", 0x812480f55495637L).target(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x56f13ba7056d3ef7L).optional(false).ordered(true).multiple(true).origin("581606532576794167").done();
+    b.alias("random");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForReturnAction() {
@@ -256,6 +292,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:3b423fe3-f0e6-4131-bf0a-a0d7d72673f2(io.arct.dialoguetree.structure)/6264854145185538114");
     b.version(2);
     b.property("text", 0x56f13ba7056ae043L).type(PrimitiveTypeId.STRING).origin("6264854145185538115").done();
+    b.aggregate("speaker", 0x812480f554add6cL).target(0x200ef616249d4ed7L, 0x9810cbdeaf100067L, 0x812480f55445d45L).optional(false).ordered(true).multiple(false).origin("581606532576894316").done();
     b.alias("text");
     return b.create();
   }

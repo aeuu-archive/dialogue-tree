@@ -654,6 +654,32 @@
             </node>
           </node>
         </node>
+        <node concept="3clFbH" id="wii0Xlh684" role="3cqZAp" />
+        <node concept="3clFbJ" id="wii0Xlh6e2" role="3cqZAp">
+          <node concept="3clFbS" id="wii0Xlh6e4" role="3clFbx">
+            <node concept="3cpWs6" id="wii0Xlh6Q7" role="3cqZAp">
+              <node concept="2YIFZM" id="wii0Xlh70e" role="3cqZAk">
+                <ref role="37wK5l" to="o8zo:6t3ylNOzI9Y" resolve="forNamedElements" />
+                <ref role="1Pybhc" to="o8zo:7ipADkTevLm" resolve="SimpleRoleScope" />
+                <node concept="13iPFW" id="wii0Xlh73E" role="37wK5m" />
+                <node concept="359W_D" id="wii0Xlh784" role="37wK5m">
+                  <ref role="359W_E" to="dr07:5rLeUs5qjVs" resolve="DialogueTree" />
+                  <ref role="359W_F" to="dr07:wii0Xlh7eT" resolve="participants" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="2OqwBi" id="wii0Xlh6zc" role="3clFbw">
+            <node concept="37vLTw" id="wii0Xlh6he" role="2Oq$k0">
+              <ref role="3cqZAo" node="5rLeUs5BcNS" resolve="kind" />
+            </node>
+            <node concept="2Zo12i" id="wii0Xlh6M7" role="2OqNvi">
+              <node concept="chp4Y" id="wii0Xlh6Ps" role="2Zo12j">
+                <ref role="cht4Q" to="dr07:wii0Xlh5P2" resolve="Participant" />
+              </node>
+            </node>
+          </node>
+        </node>
         <node concept="3clFbH" id="5rLeUs5Ber9" role="3cqZAp" />
         <node concept="3cpWs6" id="5rLeUs5Bd$G" role="3cqZAp">
           <node concept="10Nm6u" id="5rLeUs5Bd$X" role="3cqZAk" />

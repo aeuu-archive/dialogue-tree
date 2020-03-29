@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <root nodeRef="r:6ae9dbc6-a53a-4aa8-893a-c40093c829eb(DialogueTree.buildPlugin)/8426654291207723657">
+    <file name="DialogueTreePlugin.xml">
+      <unit id="8426654291207723657" at="1,0,446,10" name="DialogueTree.buildPlugin.DialogueTreePlugin" />
+    </file>
+  </root>
+</debug-info>
+
